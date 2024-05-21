@@ -1,0 +1,17 @@
+#include <iostream>
+
+double calculateAcres(double tract) {
+    const double ACRES_PER_SQUARE_FOOT = 1.0 / 43560.0;
+    return tract * ACRES_PER_SQUARE_FOOT;
+}
+
+int main() {
+    double tract = 391876.0; // Example tract size in square feet
+    double total_acreage = calculateAcres(tract);
+
+    std::cout << "----------------------------------------------" << std::endl;
+    std::cout << "There are approximately " << total_acreage << " acres ";
+    std::cout << "in a tract of land that has 391,876 square feet.\n";
+
+    return 0;
+}
